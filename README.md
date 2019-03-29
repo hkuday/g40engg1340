@@ -10,7 +10,7 @@ The Program will majorly have two types of fields:
 1. Key field:These fields will contain the key fields, reponsible for processing queries like sorting, searching and recommended.
 2. Profile fields: These fields are displayed only when another user or the owner themselves want to view the profile.
 
-## Profile fields:
+## What the fields contain:
 
 The program contains the following fields under which the user's data shall be stored : username, age, residence/hall, nationality and some physical features.
 
@@ -32,4 +32,4 @@ The program relies on first facing a log-in page which then generates a textfile
 
 The user is given the option of adding preferences to their profile. Such preferances basically define the basis for how the recommendation system works. According to what preferances the user enters, the program matches it with the database providing the recommended people according to the most matching categories.
 
-## 
+
