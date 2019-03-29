@@ -8,8 +8,11 @@ The aim of the project is to make a dating program for HKU Students. Such a proj
 The Program will majorly have two types of fields:
 
 Key field:These fields will contain the key fields, reponsible for processing queries like sorting, searching and recommended.
-
 Profile fields: These fields are displayed only when another user or the owner themselves want to view the profile.
+
+## Profile fields 
+
+The program contains the following fields under which the user's data shall be stored : username, age, residence/hall, nationality and some physical features.
 
 ## Structure:
 
