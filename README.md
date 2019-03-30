@@ -18,6 +18,9 @@ This file uses the following type of data from the user: name, age, residence/ha
 
 The program relies on first facing a log in page which then generates a textfile based on their username or asks a new user to log in. Once into their account the user has the option to search for profiles, sort according to certain key fields or ask for recommendations from the program.
 
+![Untitled Diagram](https://user-images.githubusercontent.com/47697048/55280324-20467e00-535f-11e9-9ecc-33d7dd2ab286.jpg)
+
+
 ### How data is stored on the database:
 
 * The users have their individual **Profile Files**, named according to their username.
