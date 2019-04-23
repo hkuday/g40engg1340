@@ -1,10 +1,15 @@
-#include <iostream>
-#include "login.cpp"
+#include "main.h"
+#include "dashboard.cpp"
+#include "AccessControl.cpp"
 
 using namespace std;
 
 int main(){
-  cout<<"Hello World";
-  //the function calls will go here
+  string name;
+  if(AccessControl(name))
+      PostLogin(name);
+
+
+
   return 0;
 }
