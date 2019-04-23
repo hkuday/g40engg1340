@@ -1,8 +1,9 @@
+#include <iostream>
+#include <string>
 #include "main.h"
 #include "dashboard.cpp"
 #include "AccessControl.cpp"
 
-using namespace std;
 
 int main(){
   string name;

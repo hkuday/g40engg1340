@@ -1,13 +1,17 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
-#include <fstream>
 #include <cstring>
+#include <string>
 
-struct user{
+using namespace std;
+
+struct user
+{
   //add the key fields
-  int age,yearOfStudy;
-  string name;
-  string hallName;
-
+  int age=0;
+  int yearOfStudy=0;
+  string name="";
+  string hall="";
+  string gender="";
 };
