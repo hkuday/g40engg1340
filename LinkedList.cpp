@@ -1,9 +1,17 @@
-
+/*
+  Function: DisplayProfile(string username)
+  Input:
+    username: Username of the person whose profile is to be displayed
+  Output:
+    1.Open's the user profile file
+    2.Prints the details except the password
+*/
 void DisplayProfile(string username)
 {
   string temp;
   ifstream name;
-  name.open((username+".txt").c_str());
+  name.open((username+".txt").c_str());//1
+  //Executing 2
   name>>temp;
   name>>temp;
   cout<<username<<"'s gender is "<<temp<<endl;
@@ -18,32 +26,51 @@ void DisplayProfile(string username)
   name.close();
 }
 
+/*
+  Function: Push(string name, Node * head)
+  Input:
+    name: the name of the user to be added to the stack
+    head: the current memory location for head
+  Output:
+    Pushes the string username to the stack whose head it receives
+*/
+
 Node* Push(string name, Node * head)
 {
   Node* temp= new Node;
   temp->uName=name;
   temp->next=head;
   head=temp;
-  return head;
+  return head;//for continuing the linked list the head is return
 }
+
+/*
+  Function: Display(Node* head)
+  Input:
+    head: the current memory location for head
+  Output:
+    1. Traverses the linked list and displays it
+    2. Enter choice for whose profile to display
+    3.The DisplayProfile Function is called
+*/
 
 void Display(Node* head)
 {
   int index=1,choice=0;;
   Node* current=head;
-  while(current!=NULL)
+  while(current!=NULL)//traversing the linked list
   {
-      cout<<index<<" : "<<current->uName<<endl;
+      cout<<index<<" : "<<current->uName<<endl;//display the menu
       current=current->next;
       ++index;
   }
   index=1;
-  cin>>choice;
+  cin>>choice;//2
   current =head;
   while(current!=NULL)
   {
-      if(index==choice)
-        DisplayProfile(current->uName);
+      if(index==choice)//the choice the user entered
+        DisplayProfile(current->uName);//Displays the profile
       ++index;
   }
 
