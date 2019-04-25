@@ -27,3 +27,9 @@ struct Node//for creating linked list
   string uName;//Only information is username
   Node * next;//For connecting the linked list
 };
+
+//Function : clrscr()
+//The function just prints 60 new lines to clear screen
+void clrscr(){
+  cout<<string(60,'\n');
+}
