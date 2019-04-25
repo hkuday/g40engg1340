@@ -15,3 +15,9 @@ struct user
   string hall="";
   string gender="";
 };
+
+struct Node//for creating linked list
+{
+  string uName;
+  Node * next;
+};

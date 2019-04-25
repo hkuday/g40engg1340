@@ -1,3 +1,4 @@
+#include "LinkedList.cpp"
 
 void searchName(user pref)
 {
@@ -8,17 +9,7 @@ void searchName(user pref)
         name.open((pref.name+".txt").c_str());
         if (name.is_open())
         {
-            name>>temp;
-            name>>temp;
-            cout<<pref.name<<"'s gender is "<<temp<<endl;
-            name>>temp;
-            cout<<"Age is "<<temp<<endl;
-            name>>temp;
-            cout<<"In year "<<temp<<endl;
-            name>>temp;
-            cout<<"In the faculty of "<<temp<<endl;
-            name>>temp;
-            cout<<"And lives in "<<temp<<" hall"<<endl<<endl;
+            DisplayProfile(pref.name);
             name.close();
         }
         else
@@ -27,11 +18,13 @@ void searchName(user pref)
         }
     }
 }
+
 void searchAge(user pref)
 {
     if (pref.age!=0)
     {
         ifstream age;
+        Node* head=NULL;
         string temp,num;
         age.open("AgeKeyFieldFile.txt");
         while(getline(age, temp))
@@ -41,16 +34,19 @@ void searchAge(user pref)
             if ((stoi(num) >= (pref.age-3)) and (stoi(num) <= (pref.age+3)))
             {
                 temp.erase(0,3);
-                temp.erase((temp.length()-4));
-                cout<<temp<<endl;
+                temp.erase((temp.length()-5));
+                head=Push(temp,head);
             }
         }
+        Display(head);
         age.close();
     }
 }
+
 void searchGender(user pref)
 {
     ifstream gender;
+    Node* head=NULL;
     gender.open("GenderKeyFieldFile.txt");
     string temp;
     while(getline(gender, temp))
@@ -58,14 +54,18 @@ void searchGender(user pref)
         if (temp.substr(0,1)==pref.gender)
             {
                 temp=temp.substr(2);
-                temp=temp.substr(0,temp.length()-4);
-                cout<<temp<<endl;
+                temp=temp.substr(0,temp.length()-5);
+                head=Push(temp,head);
             }
     }
+    Display(head);
+    gender.close();
 }
+
 void searchHall(user pref)
 {
     ifstream hall;
+    Node* head=NULL;
     hall.open("HallKeyFieldFile.txt");
     string temp, name;
     while(getline(hall, temp))
@@ -74,29 +74,44 @@ void searchHall(user pref)
         if (name==pref.hall)
         {
             temp=temp.substr((temp.find(" ")+1));
-            temp=temp.substr(0,temp.length()-4);
-            cout<<temp<<endl;
+            temp=temp.substr(0,temp.length()-5);
+            head=Push(temp,head);
         }
     }
+    Display(head);
+    hall.close();
 }
 void SearchMenu()
 {
     user pref;
     cout<<"Search criteria\n";
-    cout<<"Name (leave blank if none)\n";
-    cin>>pref.name;
-    cout<<"Age (leave blank if none)\n";
-    cin>>pref.age;
-    cout<<"Gender (leave blank if none)\n";
-    cin>>pref.gender;
-    cout<<"Hall (leave blank if none)\n";
-    cin>>pref.hall;
-    ///////////////////////////////////////////////////////////////////////////////////
-    searchName(pref);
-    //////////////////////////////////////////////////////////////////////////////
-    searchAge(pref);
-    ////////////////////////////////////////////////////////////////////////
-    searchGender(pref);
-    //////////////////////////////////////////////////////////////////
-    searchHall(pref);
+    int choice=0;
+    cout<<"1. Name\n";
+    cout<<"2. Age \n";
+    cout<<"3. Gender \n";
+    cout<<"4. Hall\n";
+    cin>>choice;
+    switch(choice){
+
+      case 1:{
+        cin>>pref.name;
+        searchName(pref);
+        break;
+      }
+      case 2:{
+        cin>>pref.age;
+        searchAge(pref);
+        break;
+      }
+      case 3:{
+        cin>>pref.gender;
+        searchGender(pref);
+        break;
+      }
+      case 4:{
+        cin>>pref.hall;
+        searchHall(pref);
+      }
+    }
+
 }
