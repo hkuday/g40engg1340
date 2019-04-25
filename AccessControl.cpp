@@ -55,9 +55,6 @@ bool AccessControl(string &name)
     user.open(username.c_str());
     if (!user.is_open())//Checking whether existing user
     {
-        ofstream master;
-        master.open("masterFIle.txt");
-        master<<name<<endl;
         cout<<"User doesnot exist pls try again\n";
         cout<<"Make new account Y/N\n";
         string choice;

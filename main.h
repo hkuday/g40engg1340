@@ -1,16 +1,20 @@
+//Pre processor directives
+//Header Files
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
 #include <cstring>
 #include <string>
 #include <cstdio>
+#include <cstdlib>
 
 
 using namespace std;
 
-struct user
+//Structures included
+struct user//infomation recorded about a user
 {
-  //add the key fields
+  //add the key fields for each user
   int age=0;
   int yearOfStudy=0;
   string name="";
@@ -20,6 +24,6 @@ struct user
 
 struct Node//for creating linked list
 {
-  string uName;
-  Node * next;
+  string uName;//Only information is username
+  Node * next;//For connecting the linked list
 };

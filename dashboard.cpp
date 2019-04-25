@@ -1,6 +1,7 @@
 #include "RecordSearchModule.cpp"
 #include "EditModule.cpp"
 void PostLogin(string name){
+  //system("cls");
   int choice=4;
   do{
     cout<<"Welcome,"<<name<<endl;
