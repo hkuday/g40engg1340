@@ -1,11 +1,11 @@
 #include "RecordSearchModule.cpp"
-
+#include "EditModule.cpp"
 void PostLogin(string name){
   int choice=4;
   do{
     cout<<"Welcome,"<<name<<endl;
     cout<<"*******************************************************************\n";
-    cout<<"1.Sorting the data\n";
+    cout<<"1.Edit your profile\n";
     cout<<"2.Search for a user\n";
     cout<<"3.Recommend a date\n";
     cout<<"4.Logout\n";
@@ -16,7 +16,7 @@ void PostLogin(string name){
     switch(choice){
 
       case 1:{
-        cout<<"sort\n";
+        editProfile(name);
         break;
       }
       case 2:{

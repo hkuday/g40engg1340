@@ -62,6 +62,7 @@ void searchGender(user pref)
     gender.close();
 }
 
+
 void searchHall(user pref)
 {
     ifstream hall;

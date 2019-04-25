@@ -3,6 +3,8 @@
 #include <cstdlib>
 #include <cstring>
 #include <string>
+#include <cstdio>
+
 
 using namespace std;
 
