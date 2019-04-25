@@ -1,6 +1,4 @@
-#include <iostream>
-
-using namespace std;
+#include "RecordSearchModule.cpp"
 
 void PostLogin(string name){
   int choice=4;
@@ -22,7 +20,7 @@ void PostLogin(string name){
         break;
       }
       case 2:{
-        cout<<"search\n";
+        SearchMenu();
         break;
       }
       case 3:{

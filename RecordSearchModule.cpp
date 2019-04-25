@@ -1,15 +1,5 @@
-#include <iostream>
-#include <fstream>
-using namespace std;
-struct recommendations
-{
-    string name="";
-    int age=0;
-    string gender="";
-    string hall="";
-};
 
-void searchName(recommendations pref)
+void searchName(user pref)
 {
     string temp;
     if (pref.name!="")
@@ -37,7 +27,7 @@ void searchName(recommendations pref)
         }
     }
 }
-void searchAge(recommendations pref)
+void searchAge(user pref)
 {
     if (pref.age!=0)
     {
@@ -58,7 +48,7 @@ void searchAge(recommendations pref)
         age.close();
     }
 }
-void searchGender(recommendations pref)
+void searchGender(user pref)
 {
     ifstream gender;
     gender.open("GenderKeyFieldFile.txt");
@@ -73,7 +63,7 @@ void searchGender(recommendations pref)
             }
     }
 }
-void searchHall(recommendations pref)
+void searchHall(user pref)
 {
     ifstream hall;
     hall.open("HallKeyFieldFile.txt");
@@ -89,9 +79,9 @@ void searchHall(recommendations pref)
         }
     }
 }
-int main()
+void SearchMenu()
 {
-    recommendations pref;
+    user pref;
     cout<<"Search criteria\n";
     cout<<"Name (leave blank if none)\n";
     cin>>pref.name;
