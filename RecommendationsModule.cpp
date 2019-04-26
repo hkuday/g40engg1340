@@ -1,8 +1,7 @@
 #include "RecordSearchModule.cpp"
 #include "main.h"
 
-//void FigureRecommendations(){
-int main(){
+void FigureRecommendations(){
   int numberofusers=2;
   user temp;
   temp.name="";
