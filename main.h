@@ -25,6 +25,7 @@ struct user//infomation recorded about a user
 struct Node//for creating linked list
 {
   string uName;//Only information is username
+  int score=0;
   Node * next;//For connecting the linked list
 };
 
