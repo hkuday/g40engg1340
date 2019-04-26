@@ -39,12 +39,12 @@ void searchName(user pref)
     4.Check criteria
     5.If matches push to linked list
 */
-void searchAge(user pref)
+Node* searchAge(user pref)
 {
+    Node* head=NULL;//initiating the head for linked list
     if (pref.age!=0)//1
     {
         ifstream age;
-        Node* head=NULL;//initiating the head for linked list
         string temp,num;
         age.open("AgeKeyFieldFile.txt");
         while(getline(age, temp))//2
@@ -54,13 +54,13 @@ void searchAge(user pref)
             if ((stoi(num) >= (pref.age-3)) and (stoi(num) <= (pref.age+3)))//4
             {
                 temp.erase(0,3);
-                temp.erase((temp.length()-5));
+                temp.erase((temp.length()-4));
                 head=Push(temp,head);//5
             }
         }
-        Display(head);
         age.close();
     }
+    return head;
 }
 
 /*
@@ -75,7 +75,7 @@ void searchAge(user pref)
     5.If matches push to linked list
 */
 
-void searchGender(user pref)
+Node * searchGender(user pref)
 {
     ifstream gender;
     Node* head=NULL;//initiating the head for linked list
@@ -86,12 +86,13 @@ void searchGender(user pref)
         if (temp.substr(0,1)==pref.gender)//3 and 4
             {
                 temp=temp.substr(2);
-                temp=temp.substr(0,temp.length()-5);
+                temp=temp.substr(0,temp.length()-4);
+                cout<<temp;
                 head=Push(temp,head);//5
             }
     }
-    Display(head);
     gender.close();
+    return head;
 }
 
 /*
@@ -106,7 +107,7 @@ void searchGender(user pref)
     5.If matches push to linked list
 */
 
-void searchHall(user pref)
+Node * searchHall(user pref)
 {
     ifstream hall;
     Node* head=NULL;//initiating the head for linked list
@@ -118,12 +119,12 @@ void searchHall(user pref)
         if (name==pref.hall)//3 and 4
         {
             temp=temp.substr((temp.find(" ")+1));
-            temp=temp.substr(0,temp.length()-5);
+            temp=temp.substr(0,temp.length()-4);
             head=Push(temp,head);//5
         }
     }
-    Display(head);
     hall.close();
+    return head;
 }
 
 /*
@@ -137,6 +138,7 @@ void searchHall(user pref)
 void SearchMenu()
 {
     user pref;//the object just stores the preference
+    Node * head=NULL;
     cout<<"Search criteria\n";
     int choice=0;
     cout<<"1. Name\n";
@@ -153,18 +155,18 @@ void SearchMenu()
       }
       case 2:{
         cin>>pref.age;
-        searchAge(pref);
+        head=searchAge(pref);
         break;
       }
       case 3:{
         cin>>pref.gender;
-        searchGender(pref);
+        head=searchGender(pref);
         break;
       }
       case 4:{
         cin>>pref.hall;
-        searchHall(pref);
+        head=searchHall(pref);
       }
     }
-
+    Display(head);
 }
