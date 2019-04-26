@@ -56,6 +56,7 @@ Node* searchAge(user pref)
                 temp.erase(0,3);
                 temp.erase((temp.length()-4));
                 head=Push(temp,head);//5
+                head->score=abs((6*(stoi(num)-pref.age)/3));
             }
         }
         age.close();
@@ -89,6 +90,7 @@ Node * searchGender(user pref)
                 temp=temp.substr(0,temp.length()-4);
                 cout<<temp;
                 head=Push(temp,head);//5
+                head->score=6;
             }
     }
     gender.close();
@@ -121,6 +123,7 @@ Node * searchHall(user pref)
             temp=temp.substr((temp.find(" ")+1));
             temp=temp.substr(0,temp.length()-4);
             head=Push(temp,head);//5
+            head->score=6;
         }
     }
     hall.close();
