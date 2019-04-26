@@ -64,6 +64,7 @@ void Display(Node* head)
       current=current->next;
       ++index;
   }
+/*
   index=1;
   cin>>choice;//2
   current =head;
@@ -71,7 +72,8 @@ void Display(Node* head)
   {
       if(index==choice)//the choice the user entered
         DisplayProfile(current->uName);//Displays the profile
+        current=current->next;
       ++index;
-  }
+  }*/
 
 }

@@ -15,8 +15,8 @@ using namespace std;
 struct user//infomation recorded about a user
 {
   //add the key fields for each user
-  int age=0;
-  int yearOfStudy=0;
+  int age;
+  int yearOfStudy;
   string name="";
   string hall="";
   string gender="";
@@ -31,6 +31,6 @@ struct Node//for creating linked list
 
 //Function : clrscr()
 //The function just prints 60 new lines to clear screen
-void clrscr(){
-  cout<<string(60,'\n');
-}
+//void clrscr(){
+//  cout<<string(60,'\n');
+//}

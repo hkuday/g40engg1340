@@ -88,7 +88,6 @@ Node * searchGender(user pref)
             {
                 temp=temp.substr(2);
                 temp=temp.substr(0,temp.length()-4);
-                cout<<temp;
                 head=Push(temp,head);//5
                 head->score=6;
             }
@@ -121,7 +120,7 @@ Node * searchHall(user pref)
         if (name==pref.hall)//3 and 4
         {
             temp=temp.substr((temp.find(" ")+1));
-            temp=temp.substr(0,temp.length()-4);
+            temp=temp.substr(0,temp.length()-5);
             head=Push(temp,head);//5
             head->score=6;
         }
@@ -171,5 +170,7 @@ void SearchMenu()
         head=searchHall(pref);
       }
     }
-    Display(head);
+    if(head!=NULL)
+      Display(head);
+    head=NULL;
 }

@@ -6,7 +6,7 @@
 
 int main(){
   string name;//For receiving the name of the user
-  clrscr();
+  //clrscr();
   //Found the text format at: http://patorjk.com/software/taag/#p=display&f=Big&t=HKU-Tinder
   cout<<"\t __    _ _  ___    _     _______ _           _\n";
   cout<<"\t| |  | | |/ / |  | |   |__   __(_)         | |\n";

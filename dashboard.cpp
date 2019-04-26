@@ -1,6 +1,7 @@
 //Pre-processor directive
 #include "RecordSearchModule.cpp"
 #include "EditModule.cpp"
+#include "RecommendationsModule.cpp"
 
 /*
 Function:PostLogin(string name)
@@ -12,9 +13,9 @@ Function:PostLogin(string name)
 */
 
 void PostLogin(string name){
-  clrscr();
+  //clrscr();
   int choice=4;//By default choice is set to exit condtion below
-  do{
+  //do{
     //Found the text format at: http://patorjk.com/software/taag/#p=display&f=Varsity&t=Dashboard
     cout<<"\t\t ___  ____ ____ _  _ ___  ____ ____ ____ ___  \n";
     cout<<"\t\t|  \\ |__| [__  |__| |__] |  | |__| |__/ |  \\ \n";
@@ -41,17 +42,17 @@ void PostLogin(string name){
         break;
       }
       case 3:{//***
-        cout<<"recommend\n";
+        FigureRecommendations();
         break;
       }
       case 4://****
         cout<<"Successful Logout\n";
-      default://if invalid input
-        {
-          clrscr();
-          cout<<"\n\nPlease enter Valid Command\n\n";
-        }
+      //default://if invalid input
+      //  {
+          //clrscr();
+      //    cout<<"\n\nPlease enter Valid Command\n\n";
+      //  }
 
     }
-  }while(choice!=4);
+  //}while(choice!=4);
 }

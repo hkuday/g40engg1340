@@ -92,7 +92,7 @@ void editProfile(string name)
 {
 
   int choice;
-  clrscr();
+  //clrscr();
   cout<<"\t____ ___  _ ___          _  _ ____ _  _ _  _ \n";
   cout<<"\t|___ |  \\ |  |     __    |\\/| |___ |\\ | |  | \n";
   cout<<"\t|___ |__/ |  |           |  | |___ | \\| |__|  \n\n";
@@ -132,5 +132,5 @@ void editProfile(string name)
     }
 
   }
-  clrscr();
+  //clrscr();
 }
