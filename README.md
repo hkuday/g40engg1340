@@ -16,9 +16,16 @@ Using Terminal or Console Commands
     ```
     ./output
     ```  
-## Navigating through the system 
-The hyperlink will lead to 
-
+    
+## How to navigate through the system
+1. Once the program is up and running, you will see the **log-in page** :
+   * For new user: You will be asked to enter the user details.
+   * For existing user: You will be asked to enter the password.
+2. Now you shall be lead to the dashboard which allows you to:
+   1. Edit your profile within the system
+   2. Search for an existing user
+   3. Recommends a date
+   
 ## Types of Files:
 
 The Program will majorly have two types of files:
@@ -57,12 +64,4 @@ The user is given the option of adding preferences once the recommendations opti
 1. file i/o: As explained before there are two types of text files in which the data is stored.
 2. Dynamic memory allocation: The program creates multiple linked lists to send the data across between different functions.
 
-## How to navigate through the system
-1. Once the program is up and running, you will see the **log-in page** :
-   * For new user: You will be asked to enter the user details.
-   * For existing user: You will be asked to enter the password.
-2. Now you shall be lead to the dashboard which allows you to:
-   1. Edit your profile within the system
-   2. Search for an existing user
-   3. Recommends a date
  
