@@ -1,13 +1,13 @@
 
 Contents
-Getting Started  	1
-    Creating new account	2
-    Existing User Login	4
-Getting used to the dashboard	4
-    Edit your profile	5
-    Searching for users	6
-    Getting refined reccommendations	6
-    Logging out	8
+Getting Started  	
+Â Â Â Â Creating new account	
+Â Â Â Â Existing User Login	
+Getting used to the dashboard	
+Â Â Â Â Edit your profile	
+Â Â Â Â Searching for users	
+    Getting refined reccommendations	
+Â Â Â Â Logging out	
 
 
 
@@ -22,8 +22,8 @@ New User:
 
 Enter your name into the console. 
 
-The console will ask you whether you want to create a new account or not. Type “Y” to continue 
-or “N” to exit.
+The console will ask you whether you want to create a new account or not. Type â€œYâ€ to continue 
+or â€œNâ€ to exit.
 
 Choose and enter your password.
 
@@ -63,7 +63,7 @@ Choose from the four different search attributes by entering the appropriate ind
 
 The query result is displayed on the screen. 
 
-Each individual user’s profile from the query result can be viewed by entering the name of that specific user. After displaying the user profile, you are directed back to your dashboard.
+Each individual userâ€™s profile from the query result can be viewed by entering the name of that specific user. After displaying the user profile, you are directed back to your dashboard.
 
 Getting refined recommendations:
 Recommendations is a more complex query system which inputs multiple criteria from the user and returns query results which fulfill all those search criterions. You input different data as prompted by the console. 
