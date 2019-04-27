@@ -16,6 +16,8 @@ Using Terminal or Console Commands
     ```
     ./output
     ```  
+## Navigating through the system 
+The hyperlink will lead to 
 
 ## Types of Files:
 
