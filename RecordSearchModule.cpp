@@ -56,7 +56,6 @@ Node* searchAge(user pref)
                 temp.erase(0,3);
                 temp.erase((temp.length()-4));
                 head=Push(temp,head);//5
-                head->score=abs((6*(stoi(num)-pref.age)/3));
             }
         }
         age.close();
@@ -89,7 +88,6 @@ Node * searchGender(user pref)
                 temp=temp.substr(2);
                 temp=temp.substr(0,temp.length()-4);
                 head=Push(temp,head);//5
-                head->score=6;
             }
     }
     gender.close();
@@ -120,9 +118,8 @@ Node * searchHall(user pref)
         if (name==pref.hall)//3 and 4
         {
             temp=temp.substr((temp.find(" ")+1));
-            temp=temp.substr(0,temp.length()-5);
+            temp=temp.substr(0,temp.length()-4);
             head=Push(temp,head);//5
-            head->score=6;
         }
     }
     hall.close();
@@ -172,5 +169,6 @@ void SearchMenu()
     }
     if(head!=NULL)
       Display(head);
+    
     head=NULL;
 }

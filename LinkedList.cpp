@@ -8,6 +8,7 @@
 */
 void DisplayProfile(string username)
 {
+  clrscr();
   string temp;
   ifstream name;
   name.open((username+".txt").c_str());//1
@@ -24,6 +25,9 @@ void DisplayProfile(string username)
   name>>temp;
   cout<<"And lives in "<<temp<<" hall"<<endl<<endl;
   name.close();
+
+  Pause();
+
 }
 
 /*
@@ -64,7 +68,7 @@ void Display(Node* head)
       current=current->next;
       ++index;
   }
-/*
+
   index=1;
   cin>>choice;//2
   current =head;
@@ -74,6 +78,6 @@ void Display(Node* head)
         DisplayProfile(current->uName);//Displays the profile
         current=current->next;
       ++index;
-  }*/
+  }
 
 }

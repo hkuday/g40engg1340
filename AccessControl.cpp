@@ -5,13 +5,14 @@ bool access=false;
 //if exist check password and allow access
 void makeAccount(string username)
 {
-    ofstream user;
-    user.open(username.c_str());
+    ofstream user1;
+    user1.open(username.c_str());
     ofstream ageKey, genderKey, hallKey;
     ageKey.open("AgeKeyFieldFile.txt", ios::app);
     genderKey.open("GenderKeyFieldFile.txt", ios::app);
     hallKey.open("HallKeyFieldFile.txt", ios::app);
-    string password,retypePassword, temp;
+    string password,retypePassword,temp1;
+    user temp;
     while(true)
     {
         cout<<"Enter password"<<endl;
@@ -23,28 +24,28 @@ void makeAccount(string username)
         else
             cout<<"Passwords do not match"<<endl;
     }
-    user<<password<<endl;
+    user1<<password<<endl;
     cout<<"What is your gender M/F : \n";
-    cin>>temp;
-    user<<temp<<endl;
+    cin>>temp.gender;
+    user1<<temp.gender<<endl;
     // update KeyFieldFiles: gender
-    genderKey<<temp<<" "<<username<<endl;
+    genderKey<<temp.gender<<" "<<username<<endl;
     cout<<"What is your age : \n";
-    cin>>temp;
-    user<<temp<<endl;
+    cin>>temp.age;
+    user1<<temp.age<<endl;
     // update KeyFieldFiles : age
-    ageKey<<temp<<" "<<username<<endl;
+    ageKey<<temp.age<<" "<<username<<endl;
     cout<<"What is your year of study : \n";
-    cin>>temp;
-    user<<temp<<endl;
+    cin>>temp.yearOfStudy;
+    user1<<temp.yearOfStudy<<endl;
     cout<<"What is your faculty : \n";
-    cin>>temp;
-    user<<temp<<endl;
+    cin>>temp.faculty;
+    user1<<temp.faculty<<endl;
     cout<<"What is your hall of residence : \n";
-    cin>>temp;
-    user<<temp<<endl;
+    cin>>temp.hall;
+    user1<<temp.hall<<endl;
     // update KeyFieldFiles
-    hallKey<<temp<<" "<<username<<endl;
+    hallKey<<temp.hall<<" "<<username<<endl;
 }
 bool AccessControl(string &name)
 {

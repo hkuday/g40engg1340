@@ -1,13 +1,35 @@
 //#include "RecordSearchModule.cpp"
+
+
 Node* addLink(Node * head, Node * newList)
 {
   Node* temp= new Node;
+  //int tempScore=(head==NULL)?0:head->score;
   temp->uName=newList->uName;
-  temp->score=temp->score+newList->score;
+  //temp->score=tempScore+newList->score;
   temp->next=head;
   head=temp;
   return head;//for continuing the linked list the head is return
 }
+
+/*void DisplaySorted(Node * head)
+{
+  int index=1;
+  for (int Oscore=12;Oscore>=0;Oscore--)
+  {
+    Node *current=head;
+    while(current!=NULL)
+      {
+        if(current->score==Oscore)
+          {
+            cout<<index<<" . "<<current->uName<<" : "<<current->score<<endl;
+            ++index;
+          }
+        current=current->next;
+      }
+  }
+}
+*/
 void FigureRecommendations()
 {
   user temp;
@@ -24,7 +46,9 @@ void FigureRecommendations()
   head2=searchGender(temp);
 
   head3=searchHall(temp);
-
+  //Display(head1);
+  //Display(head2);
+  //Display(head3);
   while (head2!=NULL)
   {
     temp1=head1;
@@ -33,6 +57,7 @@ void FigureRecommendations()
       if (head2->uName==temp1->uName)
       {
         subSet1=addLink(subSet1, temp1);
+        //cout<<subSet1->uName<<subSet1->score;
       }
       temp1=temp1->next;
     }
@@ -42,13 +67,13 @@ void FigureRecommendations()
       if (head2->uName==temp3->uName)
       {
         subSet2=addLink(subSet2, temp3);
+        //cout<<subSet2->uName<<subSet2->score;
       }
       temp3=temp3->next;
     }
     head2=head2->next;
   }
-  //Display(subSet1);
-  //Display(subSet2);
+
 
 
     while(subSet1!=NULL)

@@ -20,6 +20,7 @@ struct user//infomation recorded about a user
   string name="";
   string hall="";
   string gender="";
+  string faculty="";
 };
 
 struct Node//for creating linked list
@@ -31,6 +32,15 @@ struct Node//for creating linked list
 
 //Function : clrscr()
 //The function just prints 60 new lines to clear screen
-//void clrscr(){
-//  cout<<string(60,'\n');
-//}
+void clrscr(){
+  cout<<string(60,'\n');
+}
+
+//Function: Pause()
+//Only for generating a console pause
+void Pause()
+{
+  char temp;
+  cout<<"Input any character to continue..."<<endl;
+  cin>>temp;//garbage input, is not used
+}

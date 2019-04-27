@@ -132,5 +132,6 @@ void editProfile(string name)
     }
 
   }
-  //clrscr();
+  cout<<"The changes have been made"<<endl<<endl;
+  Pause();
 }

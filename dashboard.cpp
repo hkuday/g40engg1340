@@ -13,9 +13,9 @@ Function:PostLogin(string name)
 */
 
 void PostLogin(string name){
-  //clrscr();
   int choice=4;//By default choice is set to exit condtion below
-  //do{
+  do{
+    clrscr();
     //Found the text format at: http://patorjk.com/software/taag/#p=display&f=Varsity&t=Dashboard
     cout<<"\t\t ___  ____ ____ _  _ ___  ____ ____ ____ ___  \n";
     cout<<"\t\t|  \\ |__| [__  |__| |__] |  | |__| |__/ |  \\ \n";
@@ -54,5 +54,5 @@ void PostLogin(string name){
       //  }
 
     }
-  //}while(choice!=4);
+  }while(choice!=4);
 }
