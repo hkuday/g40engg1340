@@ -17,7 +17,8 @@ Using Terminal or Console Commands
     ./output
     ```  
     
-## How to navigate through the system
+## How to navigate through the system (check file DOCUMENTATION.dox for in-depth explaination)
+This is a brief description of our features
 1. Once the program is up and running, you will see the **log-in page** :
    * For new user: You will be asked to enter the user details.
    * For existing user: You will be asked to enter the password.
