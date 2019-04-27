@@ -21,7 +21,7 @@ Using Terminal or Console Commands
 1. Once the program is up and running, you will see the **log-in page** :
    * For new user: You will be asked to enter the user details.
    * For existing user: You will be asked to enter the password.
-2. Now you shall be lead to the dashboard which allows you to:
+2. Now you shall be lead to the **dashboard** which allows you to:
    1. Edit your profile within the system
    2. Search for an existing user
    3. Recommends a date
