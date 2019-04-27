@@ -1,6 +1,7 @@
 //#include "RecordSearchModule.cpp"
+//Commented out sections using variable score reflect a feature we would like to work on after the completion of our course.
 
-
+//Copies node pinted to by newlist into a new node and adds it to list pointed to by head
 Node* addLink(Node * head, Node * newList)
 {
   Node* temp= new Node;
@@ -30,6 +31,8 @@ Node* addLink(Node * head, Node * newList)
   }
 }
 */
+
+// Outputs a linked list based on the intersection of multiple search criterias
 void FigureRecommendations()
 {
   user temp;
@@ -41,14 +44,18 @@ void FigureRecommendations()
   cin>>temp.age;
   cout<<"Do you have a hall preference? \n";
   cin>>temp.hall;
+  //Getting list of elements from different criterias 
   head1=searchAge(temp);
 
   head2=searchGender(temp);
 
   head3=searchHall(temp);
+  
   //Display(head1);
   //Display(head2);
   //Display(head3);
+  
+  //Carrying out a set intersection operation on age and gender & hall and gender
   while (head2!=NULL)
   {
     temp1=head1;
@@ -75,7 +82,7 @@ void FigureRecommendations()
   }
 
 
-
+//Another intersection operation from the two lists produced from previous intersection
     while(subSet1!=NULL)
     {
       sub=subSet2;
