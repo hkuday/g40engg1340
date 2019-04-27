@@ -64,4 +64,11 @@ The user is given the option of adding preferences once the recommendations opti
 1. file i/o: As explained before there are two types of text files in which the data is stored.
 2. Dynamic memory allocation: The program creates multiple linked lists to send the data across between different functions.
 
+## Limitations to out project
+1. Any input must not have any space or else it may interfere with inputs later.
+2. If a number out of the range of any option on the menu is entered, the program will not prompt the user to enter correct input.
+
+## Future developments
+In addition to removing the current limitations to the system, we further would develop the recommendations module within the system. There shall be a scoring system (currently in the comments) which once implemented would arrange users according to those who meet the requirements the most to those who match the least. This shall refine the recommendations system giving a more accurate result for recommendations.
+
  
