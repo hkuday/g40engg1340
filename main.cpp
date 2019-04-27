@@ -19,7 +19,7 @@ int main(){
 
   if(AccessControl(name))//checks if a successful login or new account is made
       PostLogin(name);//display the dashboard
-
+//else not required
 
   return 0;
 }//main ends
