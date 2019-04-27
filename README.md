@@ -3,11 +3,21 @@
 ## Introduction:
 The aim of the project is to make a dating program for HKU Students. Such a project, if successful can have its log-in incorporated with the HKU Portal.
 
+## Running the Program
+Using an IDE:
+  * You may just run the main.cpp file
+
+Using Terminal or Console Commands
+  * First compile all the files and create the executable using
+    '''make '''
+  * Now you may just run the hence created executable called output
+    '''./output'''  
+
 ## Types of Files:
 
 The Program will majorly have two types of files:
 
-1. Key field files :These fields will contain the key fields, reponsible for processing queries like sorting, searching and      recommendations.
+1. Key field files :These fields will contain the key fields, responsible for processing queries like sorting, searching and      recommendations.
 2. Profiles : These fields are displayed only when another user or the owner themselves want to view the profile.
 
 ## Profiles:
@@ -24,7 +34,6 @@ The program relies on first facing a log in page which then generates a textfile
 ### How data is stored on the database:
 
 * The users have their individual **Profile Files**, named according to their username.
-* The **Master Key** file contains only the User's Name and the username.
 * The **Key files** contain the username and the information of the User under the field.
 
 
@@ -35,10 +44,11 @@ The program relies on first facing a log in page which then generates a textfile
 
 ## How the recommendation works:
 
-The user is given the option of adding preferences to their profile. Such preferances basically define the basis for how the recommendation system works. According to what preferences the user enters, the program matches it with the database providing the recommended people according to the most matching categories.
+The user is given the option of adding preferences once the recommendations option is selected from the menu. Such preferences basically define the basis for how the recommendation system works. According to what preferences the user enters, the program matches it with the database providing the recommended people according to the most matching categories.
 
 ## How the program matches the requirements:
 
-Our program constructs a DBMS for the users using the two types of files as specified and runs the required queries of sort and search on the key field files. Hence, meeting the requirements for the problem.
+1. file i/o: As explained before there are two types of text files in which the data is stored.
+2. Dynamic memory allocation: The program creates multiple linked lists to send the data across between different functions.
 
-## 
+##
