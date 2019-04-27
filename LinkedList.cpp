@@ -1,4 +1,22 @@
 /*
+Function: FreeMemory(Node * &head)
+Input:
+  head for the linked list
+Output:
+  deletes the linked list
+*/
+void FreeMemory(Node * &head)
+{
+
+  	while ( head != NULL ) {
+      Node * p = head;
+	    head= head->next;
+	    delete p;
+      }
+    delete head;
+}
+
+/*
   Function: DisplayProfile(string username)
   Input:
     username: Username of the person whose profile is to be displayed

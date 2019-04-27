@@ -169,6 +169,5 @@ void SearchMenu()
     }
     if(head!=NULL)
       Display(head);
-    
-    head=NULL;
+    FreeMemory(head);//deleting linked list
 }

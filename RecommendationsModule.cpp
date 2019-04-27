@@ -44,17 +44,17 @@ void FigureRecommendations()
   cin>>temp.age;
   cout<<"Do you have a hall preference? \n";
   cin>>temp.hall;
-  //Getting list of elements from different criterias 
+  //Getting list of elements from different criterias
   head1=searchAge(temp);
 
   head2=searchGender(temp);
 
   head3=searchHall(temp);
-  
+
   //Display(head1);
   //Display(head2);
   //Display(head3);
-  
+
   //Carrying out a set intersection operation on age and gender & hall and gender
   while (head2!=NULL)
   {
@@ -98,6 +98,13 @@ void FigureRecommendations()
     }
     //cout<<subSet2->uName;
     Display(sub1);
-    cout<<"End";
-
+    FreeMemory(sub1);
+    delete head1;
+    delete head2;
+    delete head3;
+    delete subSet1;
+    delete subSet2;
+    delete temp1;
+    delete temp3;
+    delete sub;
 }
