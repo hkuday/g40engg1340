@@ -9,13 +9,13 @@ Using an IDE:
 
 Using Terminal or Console Commands
   * First compile all the files and create the executable using
-    '''
+    ```
     make
-    '''
+    ```
   * Now you may just run the hence created executable called output
-    '''
+    ```
     ./output
-    '''  
+    ```  
 
 ## Types of Files:
 
